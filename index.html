@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link type="text/css" rel="styleSheet" href="app/css/contact.css">
+</head>
+
+<body ng-app="contactApp" layout="absolute">
+    <div ng-controller="parent as PC" flex>
+
+
+        <div class="padding10px" style="background-color:lightgray" flex>
+            <h2>Contact Information</h2>
+        </div>
+        <div flex>
+            <!-- drawer -->
+            <div style="background-color:dimgrey; float: left; width: 20%;height:100%" flex>
+
+                <div class ="padding20"  ng-class="{'back-color':PC.isDashboard}">
+                    <a style="color:white" ng-class="{'font-color':PC.isDashboard}" ui-sref="dashboard"  ng-click="onCellClick('Dashboard')" ui-sref-active="active">Dashboard</a>
+                </div>
+
+                <div  class ="padding20" ng-class="{'back-color':PC.isContact}" >
+                    <a  style="color:white" ng-class="{'font-color':PC.isContact}" ng-click="onCellClick('contact')" ui-sref="contact" ui-sref-active="active">Contacts</a>
+                </div>
+
+
+            </div>
+
+            <!-- Main content -->
+            <div style="float: left; width: 80%;" flex>
+                <ui-view></ui-view>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app/js/libs/angular.js"></script>
+    <script type="text/javascript" src="app/js/libs/angular-aria.js"></script>
+    <script type="text/javascript" src="app/js/libs/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/js/factories/mircoservice.js"></script>
+    <script type="text/javascript" src="app/js/controllers/parent.js"></script>
+    <script type="text/javascript" src="app/js/controllers/addContact.js"></script>
+    <script type="text/javascript" src="app/js/controllers/contactList.js"></script>
+
+</body>
+
+</html>

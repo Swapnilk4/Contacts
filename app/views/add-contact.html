@@ -1,0 +1,118 @@
+<!-- Second form -->
+<div style="margin:50px; padding:20px;background:#dddddd;height:100%;" flex>
+    <form style="width:70%">
+        <div class="form-group margin10px" layout="row" flex>
+            <div class="col-md-6">
+                <label for="">First Name : </label>
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Enter the First Name" ng-model="AC.firstName" flex>
+            </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <br>
+            </div>
+        </div>
+        <div class="form-group margin10px" layout="row" flex>
+            <div class="col-md-6">
+                <label for="">Last Name : </label>
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Enter the Last Name" ng-model="AC.lastName" flex>
+            </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <br>
+            </div>
+        </div>
+
+        <div layout="row" class="margin10px" flex>
+            <div class="col-md-8">
+                <label for="" flex=30>Email : </label>
+            </div>
+            <div class="col-md-4">
+                <span class="glyphicon glyphicon-plus" ng-click="AC.addMoreClick()" style="float:right"></span>
+            </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+        <div layout="row" class="form-group" ng-repeat="item in AC.emailList" flex>
+            <div class="col-md-6">
+                <select class="selectpicker" ng-model="item.category">
+                    <option ng-value="'Office'">Office</option>
+                    <option ng-value="'Personal'">Personal</option>
+                </select>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" aria-describedby="emailHelp" type="email" placeholder="Enter the Email ID" ng-model="item.email_id">
+            </div>
+            <div class="col-md-1">
+                    <div class="col-md-1">
+                        <span class="glyphicon glyphicon-minus" ng-disabled="AC.emailList.length==1" ng-click="AC.removeMailClick($index)"></span>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <br>
+            </div>
+        </div>
+        <div layout="row" class="margin10px" flex>
+            <div class="col-md-8">
+
+                <label for="">Phone No : </label>
+            </div>
+            <div class="col-md-4">
+
+                <span class="glyphicon glyphicon-plus" ng-click="AC.addMorePhoneClick()" style="float:right"></span>
+            </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+        <div layout="row" class="form-group" ng-repeat="item in AC.contactList" flex>
+            <div class="col-md-6">
+                <select class="selectpicker" ng-model="item.category">
+                    <option ng-value="'Office'">Office</option>
+                    <option ng-value="'Personal'">Personal</option>
+
+                </select>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" type="text" maxlength=10 placeholder="Enter the Phone No" ng-model="item.mobile">
+            </div>
+            <div class="col-md-1">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-minus" ng-click="AC.removePhoneClick($index)"></span>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+        <div class="form-group" layout="row" flex>
+            <div class="col-md-12">
+                <br>
+            </div>
+        </div>
+
+        <div layout="row" class="margin10px" flex>
+            <div class="col-md-9"></div>
+            <div class="col-md-1" flex>
+                <button class="btn btn-default" type="submit" ng-click="AC.onSaveClick()" flex>Save</button>
+            </div>
+            <div class="col-md-1" flex>
+                <button class="btn btn-default" ng-click="AC.onCancelClick()" flex>Cancel</button>
+            </div>
+            <div class="col-md-1" flex></div>
+        </div>
+    </form>
+</div>

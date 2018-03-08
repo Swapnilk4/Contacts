@@ -1,0 +1,76 @@
+{
+    "employee": [
+        {
+            "id": 1,
+            "name": "Swapnil Kakade",
+            "email": [
+                {
+                    "category": "Office",
+                    "email_id": "SwapnilKakade@gmail.com"
+                },
+                {
+                    "category": "Personal",
+                    "email_id": "SwapnilKakade@kpit.com"
+                }
+            ],
+            "contact_no": [
+                {
+                    "category": "Office",
+                    "mobile": "9057532999"
+                },
+                {
+                    "category": "Personal",
+                    "mobile": "9157532666"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Aryan Halapara",
+            "email": [
+                {
+                    "category": "Office",
+                    "email_id": "AryanHalapara@gmail.com"
+                },
+                {
+                    "category": "Personal",
+                    "email_id": "AryanHalapara@kpit.com"
+                }
+            ],
+            "contact_no": [
+                {
+                    "category": "Office",
+                    "mobile": "8057532111"
+                },
+                {
+                    "category": "Personal",
+                    "mobile": "8157532222"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Ravi Bhosale",
+            "email": [
+                {
+                    "category": "Office",
+                    "email_id": "RaviBhosale@gmail.com"
+                },
+                {
+                    "category": "Personal",
+                    "email_id": "RaviBhosale@kpit.com"
+                }
+            ],
+            "contact_no": [
+                {
+                    "category": "Office",
+                    "mobile": "7057532342"
+                },
+                {
+                    "category": "Personal",
+                    "mobile": "7057532987"
+                }
+            ]
+        }
+    ]
+}
